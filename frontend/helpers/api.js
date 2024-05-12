@@ -57,7 +57,7 @@ export const checkAndRegister = async (
             const existingData = await response.json();
             const existingEntry = existingData.find(
                 (entry) =>
-                    entry.userName.toLowerCase() === userLogin.toLowerCase()
+                    entry.userName === userLogin
             );
             if (existingEntry) {
                 console.log("użytkownik istnieje w bazie, zaloguj się");
